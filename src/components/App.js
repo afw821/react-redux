@@ -5,7 +5,8 @@ import AboutPage from "./about/AboutPage.jsx";
 import Header from "./common/Header.jsx";
 import PageNotFound from "./PageNotFound.jsx";
 import CoursesPage from "./courses/CoursesPage.jsx";
-// Switch = only oonw route should match
+import ManageCoursePage from "./courses/ManageCoursePage.jsx";
+// Switch = only one route should match
 function App() {
   return (
     <div className="container-fluid">
@@ -14,6 +15,8 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/courses" component={CoursesPage} />
+        <Route path="/course/:slug" component={ManageCoursePage} />
+        <Route path="/course" component={ManageCoursePage} />
         <Route component={PageNotFound} />
       </Switch>
     </div>
